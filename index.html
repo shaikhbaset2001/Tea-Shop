@@ -1,27 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Tailwind -->
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <!-- FontAwesome -->
-    <script src="https://kit.fontawesome.com/32a386a3e6.js" crossorigin="anonymous"></script>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
-    <title>Tea Shop</title>
-</head>
-<body>
-    <main class="max-w-screen-xl mx-auto px-16 lg:px-28">
-        <header class="flex pt-10 mb-20">
-            <div>
-                <h1 class="text-5xl md:text-7xl">It's good <br>tea time at the <br>Tea Shop</h1>
-                <p>Tea and Botanical Solutions Supplier Give Optimum Satisfaction To Your Taste Buds.</p>
-                <button>Explore More <i class="fa-solid fa-arrow-right"></i></button>
-            </div>
-        </header>
-    </main>
-</body>
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- Tailwind -->
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script>
+        tailwind.config = {
+          theme: {
+              extend: {
+                colors: {
+                  clifford: '#da373d',
+                }
+              }
+            }
+          }
+      </script>
+          <!-- Custom Tailwind Styles -->
+          <style type="text/tailwindcss">
+            @layer utilities {
+              .content-auto {
+                content-visibility: auto;
+              }
+            }
+        </style>
+      <!-- FontAwesome -->
+      <script src="https://kit.fontawesome.com/32a386a3e6.js" crossorigin="anonymous"></script>
+      <!-- Google Fonts -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+      <title>Tea Shop</title>
+  </head>
+  <body>
+      <main class="max-w-screen-xl mx-auto px-16 lg:px-28">
+          <header class="flex pt-10 mb-20">
+              <div>
+                  <h1 class="text-5xl md:text-7xl">
+                    It's good<br>tea time at the<br>Tea Shop
+                  </h1>
+                  <p class="text-gray-500 w-3/4">
+                    Tea and Botanical Solutions Supplier Give Optimum Satisfaction To Your Taste Buds.
+                  </p>
+                  <button class="bg-gradient-to-r from-orange-500 to-red-500 px-5 py-3 rounded-lg text-white font-bold">Explore More <i class="fa-solid fa-arrow-right -rotate-45 text-xl"></i></button>
+              </div>
+              <div class="relative">
+                <div>
+                  <img class="w-full" src="assets/images/banner.png" alt="">
+                </div>
+                <!-- card -->
+                <div class=" absolute flex items-center bg-white shadow-lg px-2 py-2 md:px-10 lg:py-4 rounded-lg top-28 md:left-32 lg:left-28">
+                  <div>
+                    <i class="fa-solid fa-star text-amber-500"></i>
+                  </div>
+                  <div class="ml-2 lg:text-2xl">
+                    <h2 class="lg:text-2xl font-bold">5.00</h2>
+                    <p class="text-gray-500">Trust Pilot Rating</p>
+                  </div>
+                </div>
+              </div>
+          </header>
+      </main>
+  </body>
 </html>
